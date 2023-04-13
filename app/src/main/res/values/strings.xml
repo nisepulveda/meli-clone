@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ClonMeli</string>
+    <string name="label_stock_available">Stock disponible %d</string>
+    <string name="meli_menu">menu</string>
+</resources>
