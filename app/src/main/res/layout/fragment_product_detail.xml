@@ -7,12 +7,10 @@
     android:layout_height="match_parent"
     android:id="@+id/details_fragment">
 
-
-
     <androidx.core.widget.NestedScrollView
         android:id="@+id/content_product_detail"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/dim_0"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,41 +21,57 @@
             android:layout_height="match_parent">
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvTitle"
+                android:id="@+id/tvSoldQuantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_16"
+                android:layout_marginTop="@dimen/dim_16"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/id_view_pager"
-                android:layout_margin="@dimen/dim_10"
-                tools:text="producto" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="10 vendidos"/>
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline"
-                android:layout_width="match_parent"
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="@dimen/dim_0"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/tvTitle"
-                app:layout_constraintGuide_percent="0.4"
-                android:orientation="horizontal"
-                />
+                android:layout_marginStart="@dimen/dim_16"
+                android:layout_marginTop="@dimen/dim_8"
+                android:layout_marginEnd="@dimen/dim_16"
+                app:layout_constraintTop_toBottomOf="@id/tvSoldQuantity"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="producto" />
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/id_view_pager"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="300dp"
+                android:layout_marginTop="@dimen/dim_16"
                 app:layout_constraintTop_toBottomOf="@id/tvTitle"
-                app:layout_constraintBottom_toBottomOf="@id/guideline"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintVertical_bias="0.0"
                 />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/guideline"
+                android:layout_marginStart="@dimen/dim_16"
+                android:layout_marginTop="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_margin="@dimen/dim_10"
+                app:layout_constraintTop_toBottomOf="@id/id_view_pager"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintVertical_bias="0.0"
                 tools:text="$10.000.000"
                 />
 
@@ -65,17 +79,63 @@
                 android:id="@+id/tv_product_stock"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/tvPrice"
+                android:layout_marginStart="@dimen/dim_16"
+                android:layout_marginTop="@dimen/dim_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_margin="@dimen/dim_10"
-                tools:text="Stock"/>
+                app:layout_constraintTop_toBottomOf="@+id/tvPrice"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="Stock disponible"/>
+            
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBuyNow"
+                style="@style/Theme.Meli.Button"
+                android:text="@string/buy_now"
+                android:layout_marginTop="@dimen/dim_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_product_stock"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddToCart"
+                style="@style/Theme.Meli.Button.Secondary"
+                android:text="@string/add_to_cart"
+                android:layout_marginTop="@dimen/dim_8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnBuyNow"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAttributeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim_16"
+                android:layout_marginTop="@dimen/dim_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnAddToCart"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintVertical_bias="0.0"
+                android:text="@string/label_attribute_title"
+                />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rVProductsAttributes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/dim_16"
-                app:layout_constraintTop_toBottomOf="@id/tv_product_stock"
+                android:layout_marginStart="@dimen/dim_16"
+                android:layout_marginTop="@dimen/dim_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAttributeTitle"
                 />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

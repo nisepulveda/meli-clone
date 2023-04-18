@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">ClonMeli</string>
+    <string name="label_product_detail">Producto</string>
     <string name="label_stock_available">Stock disponible %d</string>
+    <string name="label_sold_quantity">%d Vendidos</string>
+    <string name="label_attribute_title">Caracteristicas del producto</string>
     <string name="meli_menu">menu</string>
+    <string name="buy_now">Comprar ahora</string>
+    <string name="add_to_cart">Agregar al carrito</string>
 </resources>

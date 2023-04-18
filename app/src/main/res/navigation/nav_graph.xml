@@ -19,7 +19,7 @@
     <fragment
         android:id="@+id/product_detail_fragment"
         android:name="com.nicolas.clonmeli.ui.productDetail.ProductDetailFragment"
-        android:label="@string/app_name"
+        android:label="@string/label_product_detail"
         tools:layout="@layout/fragment_product_detail" >
         <argument
             android:name="productId"

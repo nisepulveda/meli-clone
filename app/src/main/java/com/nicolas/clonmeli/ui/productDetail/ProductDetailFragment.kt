@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -85,6 +84,10 @@ class ProductDetailFragment: Fragment() {
 
                 productDetails?.availableQuantity?.let {
                     tvProductStock.text = getString(R.string.label_stock_available, productDetail?.availableQuantity)
+                }
+
+                productDetails?.soldQuantity.let {
+                    tvSoldQuantity.text = getString(R.string.label_sold_quantity, productDetail?.soldQuantity)
                 }
 
                 productDetails?.attributes?.let {

@@ -14,4 +14,23 @@
         <item name="android:textColor">@color/teal_700</item>
         <item name="android:textSize">@dimen/font_15</item>
     </style>
+
+    <style name="Theme.Meli.Button" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_marginStart">@dimen/dim_16</item>
+        <item name="android:layout_marginEnd">@dimen/dim_16</item>
+        <item name="android:backgroundTint">@color/blue</item>
+        <item name="android:insetTop">@dimen/dim_0</item>
+        <item name="android:insetBottom">@dimen/dim_0</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="cornerRadius">@dimen/dim_6</item>
+    </style>
+
+    <style name="Theme.Meli.Button.Secondary" parent="Theme.Meli.Button">
+        <item name="android:backgroundTint">@color/blue_light</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
 </resources>
