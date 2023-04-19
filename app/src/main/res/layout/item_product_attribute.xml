@@ -8,7 +8,7 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tVAttributeName"
-        style="@style/textContent"
+        style="@style/Theme.Meli.Text.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/ic_check_circle"
@@ -18,7 +18,7 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tVAttributeValue"
-        style="@style/textContent"
+        style="@style/Theme.Meli.Text.Small"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dim_16"

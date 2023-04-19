@@ -22,7 +22,7 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/title"
-        style="@style/textTitle"
+        style="@style/Theme.Meli.Text.Medium"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dim_16"
@@ -38,7 +38,7 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/price"
-        style="@style/textTitle"
+        style="@style/Theme.Meli.Text.ExtraLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dim_16"
