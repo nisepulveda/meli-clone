@@ -22,6 +22,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvSoldQuantity"
+                style="@style/Theme.Meli.Text.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dim_16"
@@ -36,6 +37,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvTitle"
+                style="@style/Theme.Meli.Text.ExtraLarge"
                 android:layout_width="@dimen/dim_0"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dim_16"
@@ -62,6 +64,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvPrice"
+                style="@style/Theme.Meli.Text.ExtraExtraLarge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dim_16"
@@ -77,6 +80,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tv_product_stock"
+                style="@style/Theme.Meli.Text.Normal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dim_16"

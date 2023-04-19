@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ClonMeli</string>
+    <string name="app_name">Mercado Libre Clone</string>
     <string name="label_product_detail">Producto</string>
     <string name="label_stock_available">Stock disponible %d</string>
     <string name="label_sold_quantity">%d Vendidos</string>

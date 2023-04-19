@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <style name="Theme.Meli" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/yellow</item>
+        <item name="colorAccent">@color/blue</item>
+        <item name="android:textAppearance">@style/Theme.Meli.Text.Large</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="android:statusBarColor">?attr/colorPrimary</item>
+    </style>
+
     <style name="textTitle" parent="TextAppearance.AppCompat">
         <item name="android:textStyle">bold</item>
         <item name="android:layout_width">wrap_content</item>
@@ -13,6 +22,36 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/teal_700</item>
         <item name="android:textSize">@dimen/font_15</item>
+    </style>
+
+    <style name="Theme.Meli.Text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Theme.Meli.Text.Small" parent="Theme.Meli.Text">
+        <item name="android:textSize">@dimen/text_size_12</item>
+    </style>
+
+    <style name="Theme.Meli.Text.Medium" parent="Theme.Meli.Text">
+        <item name="android:textSize">@dimen/text_size_14</item>
+    </style>
+
+    <style name="Theme.Meli.Text.Normal" parent="Theme.Meli.Text">
+        <item name="android:textSize">@dimen/text_size_16</item>
+    </style>
+
+    <style name="Theme.Meli.Text.Large" parent="Theme.Meli.Text">
+        <item name="android:textSize">@dimen/text_size_18</item>
+    </style>
+
+    <style name="Theme.Meli.Text.ExtraLarge" parent="Theme.Meli.Text">
+        <item name="android:textSize">@dimen/text_size_20</item>
+    </style>
+
+    <style name="Theme.Meli.Text.ExtraExtraLarge" parent="Theme.Meli.Text">
+        <item name="android:textSize">@dimen/text_size_28</item>
     </style>
 
     <style name="Theme.Meli.Button" parent="Widget.MaterialComponents.Button.UnelevatedButton">
@@ -33,4 +72,5 @@
         <item name="android:backgroundTint">@color/blue_light</item>
         <item name="android:textColor">@color/blue</item>
     </style>
+
 </resources>
