@@ -9,6 +9,18 @@
         <item name="android:statusBarColor">?attr/colorPrimary</item>
     </style>
 
+    <style name="Theme.Meli.Toolbar" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/yellow</item>
+        <item name="colorControlNormal">@color/blue</item>
+        <item name="android:elevation">@dimen/dim_4</item>
+    </style>
+
+    <style name="Theme.Meli.Toolbar.Home" parent="Theme.Meli.Toolbar">
+        <item name="android:paddingBottom">@dimen/dim_16</item>
+    </style>
+
     <style name="Theme.Meli.Text">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
