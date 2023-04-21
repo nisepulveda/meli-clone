@@ -14,23 +14,23 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var navHostController: NavController
+//    private lateinit var navHostController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setupUI()
+//        setupUI()
     }
 
-    private fun setupUI() {
-        val navFragment = supportFragmentManager.findFragmentById(R.id.fragment_container_view) as NavHostFragment
-        navHostController = navFragment.findNavController()
-        setupActionBarWithNavController(navHostController)
-    }
-
-    override fun onSupportNavigateUp(): Boolean {
-        return navHostController.navigateUp()
-    }
+//    private fun setupUI() {
+//        val navFragment = supportFragmentManager.findFragmentById(R.id.fragment_container_view) as NavHostFragment
+//        navHostController = navFragment.findNavController()
+//        setupActionBarWithNavController(navHostController)
+//    }
+//
+//    override fun onSupportNavigateUp(): Boolean {
+//        return navHostController.navigateUp()
+//    }
 }

@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SearchView
+import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.NavDeepLinkRequest
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.nicolas.clonmeli.databinding.FragmentProductListBinding
@@ -20,8 +22,9 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class ProductListFragment: Fragment() {
 
-    @Inject
-    lateinit var productAdapter: ProductAdapter
+    private val productAdapter = ProductAdapter { productId ->
+        goToProductDetail(productId)
+    }
 
     private val viewModel by viewModels<ProductViewModel>()
     private var binding: FragmentProductListBinding? = null
@@ -75,13 +78,20 @@ class ProductListFragment: Fragment() {
             }
         }
 
-        productAdapter.onItemClick = { selectedItem, _ ->
-            goToDetailsScreen(selectedItem)
-        }
+//        productAdapter.onItemClick = { selectedItem, _ ->
+//            goToDetailsScreen(selectedItem)
+//        }
     }
 
-    private fun goToDetailsScreen(selectedItem: ProductItem) {
-        val directions = ProductListFragmentDirections.actionProductListToProductDetail(selectedItem.id)
-        findNavController().navigate(directions)
+    private fun goToProductDetail(productId: String) {
+        val request = NavDeepLinkRequest.Builder
+            .fromUri("meli-app://com.nicolas.app/product_detail_fragment/$productId".toUri())
+            .build()
+        findNavController().navigate(request)
     }
+
+//    private fun goToDetailsScreen(selectedItem: ProductItem) {
+//        val directions = ProductListFragmentDirections.actionProductListToProductDetail(selectedItem.id)
+//        findNavController().navigate(directions)
+//    }
 }
