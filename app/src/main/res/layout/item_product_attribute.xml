@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tVAttributeName"
+        android:id="@+id/tvAttributeName"
         style="@style/Theme.Meli.Text.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,13 +17,13 @@
         tools:text="Nombre de atributo" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tVAttributeValue"
+        android:id="@+id/tvAttributeValue"
         style="@style/Theme.Meli.Text.Small"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dim_16"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tVAttributeName"
+        app:layout_constraintStart_toEndOf="@+id/tvAttributeName"
         tools:text="Valor de atributo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

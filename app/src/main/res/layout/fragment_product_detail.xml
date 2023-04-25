@@ -8,7 +8,7 @@
     android:id="@+id/details_fragment">
 
     <androidx.core.widget.NestedScrollView
-        android:id="@+id/content_product_detail"
+        android:id="@+id/contentProductDetail"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dim_0"
         app:layout_constraintTop_toTopOf="parent"
@@ -51,7 +51,7 @@
                 tools:text="producto" />
 
             <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/id_view_pager"
+                android:id="@+id/vpImageCarousel"
                 android:layout_width="wrap_content"
                 android:layout_height="300dp"
                 android:layout_marginTop="@dimen/dim_16"
@@ -72,14 +72,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/id_view_pager"
+                app:layout_constraintTop_toBottomOf="@id/vpImageCarousel"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintVertical_bias="0.0"
                 tools:text="$10.000.000"
                 />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_product_stock"
+                android:id="@+id/tvProductStock"
                 style="@style/Theme.Meli.Text.Normal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -101,7 +101,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_product_stock"
+                app:layout_constraintTop_toBottomOf="@id/tvProductStock"
                 app:layout_constraintVertical_bias="0.0" />
 
             <com.google.android.material.button.MaterialButton
@@ -132,7 +132,7 @@
                 />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rVProductsAttributes"
+                android:id="@+id/rvProductsAttributes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dim_16"

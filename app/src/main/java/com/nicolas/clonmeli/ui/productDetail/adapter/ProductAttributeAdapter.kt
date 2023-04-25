@@ -25,8 +25,8 @@ class ProductAttributeAdapter(private val attribute: List<ProductAttribute>):
     inner class ProductAttributeViewHolder(private val binding: ItemProductAttributeBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(data: ProductAttribute) {
             binding.apply {
-                tVAttributeName.text = data.name
-                tVAttributeValue.text = data.value
+                tvAttributeName.text = data.name
+                tvAttributeValue.text = data.value
             }
         }
     }

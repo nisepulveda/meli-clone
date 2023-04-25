@@ -29,6 +29,6 @@ class ViewPagerAdapter(private val images: List<String>) : RecyclerView.Adapter<
     }
 
     class ImageViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imageView: ImageView = itemView.findViewById(R.id.idIVImage)
+        val imageView: ImageView = itemView.findViewById(R.id.idImageView)
     }
 }

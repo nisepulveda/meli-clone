@@ -42,7 +42,7 @@ class ProductDetailFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewPager = view.findViewById(R.id.id_view_pager)
+        viewPager = view.findViewById(R.id.vpImageCarousel)
 
         setUpObservers()
         fetchData()
@@ -92,8 +92,8 @@ class ProductDetailFragment: Fragment() {
 
                 productDetails?.attributes?.let {
                     productAttributeAdapter = ProductAttributeAdapter(it)
-                    rVProductsAttributes.adapter = productAttributeAdapter
-                    rVProductsAttributes.apply {
+                    rvProductsAttributes.adapter = productAttributeAdapter
+                    rvProductsAttributes.apply {
                         layoutManager = LinearLayoutManager(context)
                         adapter = productAttributeAdapter
                         setHasFixedSize(true)

@@ -14,9 +14,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.nicolas.clonmeli.databinding.FragmentProductListBinding
 import com.nicolas.clonmeli.ui.product.adapter.ProductAdapter
-import com.nicolas.clonmeli.domain.model.ProductItem
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 
 @AndroidEntryPoint
@@ -77,10 +75,6 @@ class ProductListFragment: Fragment() {
                 setHasFixedSize(true)
             }
         }
-
-//        productAdapter.onItemClick = { selectedItem, _ ->
-//            goToDetailsScreen(selectedItem)
-//        }
     }
 
     private fun goToProductDetail(productId: String) {
@@ -89,9 +83,4 @@ class ProductListFragment: Fragment() {
             .build()
         findNavController().navigate(request)
     }
-
-//    private fun goToDetailsScreen(selectedItem: ProductItem) {
-//        val directions = ProductListFragmentDirections.actionProductListToProductDetail(selectedItem.id)
-//        findNavController().navigate(directions)
-//    }
 }
