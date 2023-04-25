@@ -7,4 +7,5 @@
     <string name="meli_menu">menu</string>
     <string name="buy_now">Comprar ahora</string>
     <string name="add_to_cart">Agregar al carrito</string>
+    <string name="product_image">Imagen Producto</string>
 </resources>
