@@ -15,7 +15,6 @@ import com.nicolas.clonmeli.databinding.FragmentProductDetailBinding
 import com.nicolas.clonmeli.domain.MeliResult
 import com.nicolas.clonmeli.domain.model.ProductDetail
 import com.nicolas.clonmeli.shared.extensions.formatToCurrency
-import com.nicolas.clonmeli.ui.product.ProductViewModel
 import com.nicolas.clonmeli.ui.productDetail.adapter.ProductAttributeAdapter
 import com.nicolas.clonmeli.ui.productDetail.adapter.ViewPagerAdapter
 import dagger.hilt.android.AndroidEntryPoint
@@ -24,7 +23,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class ProductDetailFragment: Fragment() {
     private var binding: FragmentProductDetailBinding? = null
     private val arguments: ProductDetailFragmentArgs by navArgs()
-    private val viewModel by viewModels<ProductViewModel>()
+    private val productDetailViewModel by viewModels<ProductDetailViewModel>()
 
     lateinit var viewPager: ViewPager2
     lateinit var viewPagerAdapter: ViewPagerAdapter
@@ -50,7 +49,7 @@ class ProductDetailFragment: Fragment() {
 
     private fun setUpObservers() {
         fetchData()
-        viewModel.productDetails.observe(viewLifecycleOwner) {
+        productDetailViewModel.productDetails.observe(viewLifecycleOwner) {
             it?.let {
                 when(it) {
                     is MeliResult.Success -> displayDetails(it.data)
@@ -61,7 +60,7 @@ class ProductDetailFragment: Fragment() {
     }
 
     private fun fetchData() {
-        viewModel.getProductDetails(arguments.productId)
+        productDetailViewModel.getProductDetails(arguments.productId)
     }
 
     private fun displayDetails(productDetail: ProductDetail?) {
